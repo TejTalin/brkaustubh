@@ -24,68 +24,17 @@
   transform: translateY(20px);
   transition: all 0.3s ease;
 }
-
 .whatsapp-btn.show {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
-}
-@media (max-width: 768px) {
-.hero-role {
-  font-size: 1.2rem !important;
-}
-  .hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 6rem 1.5rem 2rem;
-  text-align: center;
-}
-  }
-
-  .hero-left,
-  .hero-right {
-    width: 100%;
-    position: relative;
-    z-index: 2;
-  }
-
-  .hero-left {
-    order: 2;
-  }
-
-  .hero-right {
-    order: 1;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-img-wrap {
-    max-width: 240px;
-    margin: 0 auto;
-  }
-  .hero-left {
-  display: block !important;
-  opacity: 1 !important;
-  }
-
-  .fade-in {
-  opacity: 1 !important;
-  transform: none !important;
-    .hero-role {
-  font-size: 1.2rem !important;
-}
-
-}
-..whatsapp-btn {
+.whatsapp-btn {
   bottom: 5px;
   right: 10px;
   scale: 0.9;
 
 <style>
-  ...your existing CSS...
 
   .hero * {
     opacity: 1 !important;
@@ -141,7 +90,7 @@
 }
     position: absolute; font-family: 'Bebas Neue', sans-serif; font-size: 28vw;
     color: rgba(255,255,255,0.018); right: -2vw; top: 50%; transform: translateY(-50%);
-    line-height: 1; pointer-Eventss: none; letter-spacing: -0.03em; user-select: none;
+    line-height: 1; pointer-Events: none; letter-spacing: -0.03em; user-select: none;
   }
   /* Subtle noise texture overlay */
   .hero::after {
@@ -187,7 +136,7 @@
   display: block;
 }
     -webkit-mask-image: linear-gradient(to top, transparent 0%, black 18%);
- hero-name {
+ .hero-name {
   font-size: 2.5rem !important;
 }
 
@@ -312,7 +261,10 @@
   .contact-right strong { color: var(--gold-light); font-weight: 500; }
 
   /* FADE IN */
-  .fade-in { opacity: 0; transform: translateY(22px); transition: opacity 0.65s ease, transform 0.65s ease; }
+  ..fade-in {
+  opacity: 1 !important;
+  transform: none !important;
+}
   .fade-in.visible { opacity: 1; transform: none; }
 
   /* MOBILE */
@@ -327,6 +279,19 @@
     footer#contact { flex-direction: column; gap: 1.5rem; }
     .contact-right { text-align: left; }
     .hero-stats { left: 0; bottom: 0; }
+  }
+    @media (max-width: 768px) {
+
+.hero-btns {
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-role {
+  font-size: 1.3rem;
+}
+
+}
   }
 </style>
 </head>
