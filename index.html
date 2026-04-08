@@ -36,13 +36,14 @@
   font-size: 1.2rem !important;
 }
   .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5rem 1.2rem 2rem;
-    text-align: center;
-    min-height: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 1.5rem 2rem;
+  text-align: center;
+}
   }
 
   .hero-left,
@@ -83,7 +84,15 @@
   right: 10px;
   scale: 0.9;
 
-}
+<style>
+  ...your existing CSS...
+
+  .hero * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+</style>
 }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   :root {
