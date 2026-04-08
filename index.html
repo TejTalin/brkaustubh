@@ -6,12 +6,23 @@
 <title>B R Kaustubh — Events Secretary SCEC 2026–27</title>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
- @media (max-width: 768px) {
+@media (max-width: 768px) {
 
   .hero {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 5rem 1.2rem 2rem;
     text-align: center;
+    min-height: auto;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+    position: relative;
+    z-index: 2;
   }
 
   .hero-left {
@@ -20,34 +31,23 @@
 
   .hero-right {
     order: 1;
-    height: auto;
-    justify-content: center;
+    margin-bottom: 1.5rem;
   }
 
   .hero-img-wrap {
-    max-width: 260px;
-    margin: 0 auto 1.5rem;
+    max-width: 240px;
+    margin: 0 auto;
+  }
+  .hero-left {
+  display: block !important;
+  opacity: 1 !important;
   }
 
-  .hero-name {
-    font-size: 2.8rem !important;
-  }
+  .fade-in {
+  opacity: 1 !important;
+  transform: none !important;
 
-  .hero-role {
-    font-size: 1rem !important;
-  }
-
-  .hero-quote {
-    font-size: 0.95rem !important;
-  }
-
-  .section-title {
-    font-size: 2rem !important;
-  }
-
-  .section-sub {
-    font-size: 0.9rem !important;
-  }
+}
 
 }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -95,6 +95,8 @@
     background: linear-gradient(to bottom, #6E6A63, #4F4A44);
   }
   .hero-bg-text {
+  display: none;
+}
     position: absolute; font-family: 'Bebas Neue', sans-serif; font-size: 28vw;
     color: rgba(255,255,255,0.018); right: -2vw; top: 50%; transform: translateY(-50%);
     line-height: 1; pointer-Eventss: none; letter-spacing: -0.03em; user-select: none;
@@ -126,9 +128,21 @@
     color: var(--gold); writing-mode: vertical-rl; opacity: 0.5;
   }
   .hero-img-wrap img {
-    width: 100%; display: block; filter: grayscale(15%) contrast(1.05) brightness(0.95);
-    mask-image: linear-gradient(to top, transparent 0%, black 18%);
+  width: 100%;
+  display: block;
+}
     -webkit-mask-image: linear-gradient(to top, transparent 0%, black 18%);
+ hero-name {
+  font-size: 2.5rem !important;
+}
+
+.hero-role {
+  font-size: 1rem !important;
+}
+
+.hero-quote {
+  font-size: 0.95rem !important;
+}
   }
   .hero-stats { position: absolute; bottom: 3rem; left: -2rem; display: flex; flex-direction: column; gap: 0.4rem; }
   .stat-pill { background: rgba(22,22,20,0.9); border: 1px solid rgba(201,168,76,0.18); padding: 0.4rem 0.9rem; font-size: 0.68rem; font-weight: 500; letter-spacing: 0.08em; color: var(--gold-light); text-transform: uppercase; width: fit-content; backdrop-filter: blur(4px); }
